@@ -1267,8 +1267,6 @@ spec:
                 be using It can take either Ephemeral or persistence Default StorageType
                 is Persistence storage
               type: string
-          required:
-          - replicas
           type: object
         status:
           description: ZookeeperClusterStatus defines the observed state of ZookeeperCluster
@@ -1342,15 +1340,6 @@ spec:
               type: integer
             targetVersion:
               type: string
-          required:
-          - currentVersion
-          - externalClientEndpoint
-          - internalClientEndpoint
-          - members
-          - metaRootCreated
-          - readyReplicas
-          - replicas
-          - targetVersion
           type: object
       type: object
   version: v1beta1

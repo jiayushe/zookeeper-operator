@@ -31,26 +31,26 @@ const (
 // ZookeeperClusterStatus defines the observed state of ZookeeperCluster
 type ZookeeperClusterStatus struct {
 	// Members is the zookeeper members in the cluster
-	Members MembersStatus `json:"members"`
+	Members MembersStatus `json:"members,omitempty"`
 
 	// Replicas is the number of number of desired replicas in the cluster
-	Replicas int32 `json:"replicas"`
+	Replicas int32 `json:"replicas,omitempty"`
 
 	// ReadyReplicas is the number of number of ready replicas in the cluster
-	ReadyReplicas int32 `json:"readyReplicas"`
+	ReadyReplicas int32 `json:"readyReplicas,omitempty"`
 
 	// InternalClientEndpoint is the internal client IP and port
-	InternalClientEndpoint string `json:"internalClientEndpoint"`
+	InternalClientEndpoint string `json:"internalClientEndpoint,omitempty"`
 
 	// ExternalClientEndpoint is the internal client IP and port
-	ExternalClientEndpoint string `json:"externalClientEndpoint"`
+	ExternalClientEndpoint string `json:"externalClientEndpoint,omitempty"`
 
-	MetaRootCreated bool `json:"metaRootCreated"`
+	MetaRootCreated bool `json:"metaRootCreated,omitempty"`
 
 	// CurrentVersion is the current cluster version
-	CurrentVersion string `json:"currentVersion"`
+	CurrentVersion string `json:"currentVersion,omitempty"`
 
-	TargetVersion string `json:"targetVersion"`
+	TargetVersion string `json:"targetVersion,omitempty"`
 
 	// Conditions list all the applied conditions
 	Conditions []ClusterCondition `json:"conditions,omitempty"`

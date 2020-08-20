@@ -55,7 +55,7 @@ type ZookeeperClusterSpec struct {
 	// equal to the expected size.
 	//
 	// The valid range of size is from 1 to 7.
-	Replicas int32 `json:"replicas"`
+	Replicas int32 `json:"replicas,omitempty"`
 
 	Ports []v1.ContainerPort `json:"ports,omitempty"`
 
