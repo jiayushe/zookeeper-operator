@@ -1286,9 +1286,6 @@ spec:
                   type:
                     description: Type of Zookeeper cluster condition.
                     type: string
-                required:
-                - status
-                - type
                 type: object
               type: array
             currentVersion:
@@ -1311,9 +1308,6 @@ spec:
                   items:
                     type: string
                   type: array
-              required:
-              - ready
-              - unready
               type: object
             metaRootCreated:
               type: boolean
@@ -1329,15 +1323,6 @@ spec:
               type: integer
             targetVersion:
               type: string
-          required:
-          - currentVersion
-          - externalClientEndpoint
-          - internalClientEndpoint
-          - members
-          - metaRootCreated
-          - readyReplicas
-          - replicas
-          - targetVersion
           type: object
       type: object
   version: v1beta1
